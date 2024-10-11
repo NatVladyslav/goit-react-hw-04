@@ -1,0 +1,17 @@
+.header{
+    background-color: blueviolet;
+    padding: 10px;
+}
+.searchForm{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.formInput{
+    width: 300px;
+    padding: 3px 10px; 
+}
+.submitButton{
+   width: 120px;
+   text-align: center;
+}

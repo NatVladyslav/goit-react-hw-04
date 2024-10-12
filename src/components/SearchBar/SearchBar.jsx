@@ -1,5 +1,7 @@
 import css from "./SearchBar.module.css"
-import toast, {Toaster} from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
+import { TbSearch } from "react-icons/tb"
+import { IconContext } from "react-icons";
 
 const SearchBar = ({ onSubmit }) => {
   
@@ -13,7 +15,12 @@ const SearchBar = ({ onSubmit }) => {
 
   return (
 <header className={css.header}>
-  <form className={css.searchForm} onSubmit={handleSubmit}>
+      <form className={css.searchForm} onSubmit={handleSubmit}>
+        <IconContext.Provider value={{color: "#55883B", size: 35, className: "submitIcon"}}>
+          <button className={css.submitButton} type="submit">
+          <TbSearch/>
+        </button>
+        </IconContext.Provider>
     <input
       className={css.formInput}
           type="text"
@@ -22,7 +29,6 @@ const SearchBar = ({ onSubmit }) => {
       autoFocus
       placeholder="Search images and photos"
     />
-    <button className={css.submitButton} type="submit">Search</button>
       </form>
       <Toaster
       containerStyle={{

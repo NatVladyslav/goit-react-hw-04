@@ -2,6 +2,7 @@ import SearchBar from './components/SearchBar/SearchBar'
 import ImageGallery from './components/ImageGallery/ImageGallery'
 import LoadMoreBtn from './components/LoadMoreBtn/LoadMoreBtn'
 import Loader from './components/Loader/Loader'
+import ErrorMessage from './components/ErrorMessage/ErrorMessage'
 import {fetchPhotos} from "./apiService/fetchCardData"
 
 
@@ -14,6 +15,7 @@ function App() {
   const [param, setParam] = useState("");
   const [loader, setLoader] = useState(false);
   const [more, setMore] = useState(false);
+  const [error, setError] = useState(null);
 
   const onSubmit = (query) => {
     setPhotos([]);
@@ -37,6 +39,7 @@ function App() {
       page < data.total_pages ? setMore(true) : setMore(false);
       console.log(data)
     } catch (error) {
+      setError(error);
       console.log(error);
     } finally {
       setLoader(false);
@@ -50,7 +53,7 @@ function App() {
     <>
       <SearchBar onSubmit={onSubmit} />
       {loader && <Loader/>}
-      <ImageGallery data={photos} />
+      {error !== null ? <ErrorMessage error={error} /> : <ImageGallery data={photos} />}
       {more && <LoadMoreBtn onLoadMore={onLoadMore} />}
     </>
   )

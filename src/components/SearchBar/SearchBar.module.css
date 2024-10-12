@@ -1,6 +1,8 @@
 .header{
-    background-color: blueviolet;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
     padding: 10px;
+    border-radius: 100px;
+    margin: 10px 200px 20px 200px;
 }
 .searchForm{
     display: flex;
@@ -10,16 +12,19 @@
 .formInput{
     width: 400px;
     height: 40px;
-    padding: 3px 10px;
+    padding: 5px 20px;
     font-size: 20px; 
+    background-color: transparent;
+    border: 1px solid #3f87a6;
+    border-radius: 50px;
+    color: black;
 }
 .formInput::placeholder{
     font-size: 20px;
 }
 .submitButton{
-   width: 120px;
-   text-align: center;
-   font-size: 20px;
+   background-color: transparent;
+   border: none;
 }
 .toast{
     font-size: 30px;

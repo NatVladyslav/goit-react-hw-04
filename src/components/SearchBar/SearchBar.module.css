@@ -8,10 +8,24 @@
     justify-content: center;
 }
 .formInput{
-    width: 300px;
-    padding: 3px 10px; 
+    width: 400px;
+    height: 40px;
+    padding: 3px 10px;
+    font-size: 20px; 
+}
+.formInput::placeholder{
+    font-size: 20px;
 }
 .submitButton{
    width: 120px;
    text-align: center;
+   font-size: 20px;
+}
+.toast{
+    font-size: 30px;
+    font-weight: 400;
+    color: red;
+    background-color: darkblue;
+    border-radius: 10px;
+    padding: 10px;
 }

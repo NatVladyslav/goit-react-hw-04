@@ -1,8 +1,6 @@
 .loadMoreBtnDiv{
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-    
 }
 .btnLoadMore{
     background-color: rgb(6, 166, 113);
@@ -12,4 +10,5 @@
     height: 50px;
     font-weight: 700;
     font-size: larger;
+    margin-bottom: 30px;
 }

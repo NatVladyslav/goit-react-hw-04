@@ -10,7 +10,7 @@ const ImageModal = ({ modal, modalClose, selectedImage }) => {
       isOpen={modal}
       onRequestClose={modalClose}
       overlayClassName={css.modalBack}
-      className={css.modalText}
+      className={css.modal}
       ariaHideApp={false}
     >
       <img src={urls.regular} alt={alt_description} />
